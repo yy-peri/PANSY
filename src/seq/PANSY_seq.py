@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 from torch_geometric.nn import GATv2Conv, global_mean_pool
-from convnext import convnextv2_atto
-from Fusion import Fusion_Block
+from src.seq.Encoder import convnextv2_atto
+from src.seq.Fusion import Fusion_Block
 
 
 class GlobalGraphEncoder(nn.Module):
