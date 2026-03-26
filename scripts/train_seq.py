@@ -4,10 +4,10 @@ import time
 import numpy as np
 import torch
 from sklearn.metrics import accuracy_score
-from utils import EarlyStopping, time_since, random_seed
+from src.utils import EarlyStopping, time_since, random_seed
 from torch.utils.data import DataLoader
-from PANSY import TCR_pMHC_binding
-from data import TotalDataset, collate_fn
+from src.seq.PANSY_seq import TCR_pMHC_binding
+from src.datasets.dataset_seq import TotalDataset, collate_fn
 
 
 
