@@ -1,8 +1,8 @@
 import argparse
 import os
-from utils import random_seed
+from src.utils import random_seed
 import pandas as pd
-from data import TotalDataset, get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
+from src.datasets.dataset_seq import TotalDataset, get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
 import torch
 import random
 from sklearn.model_selection import train_test_split
