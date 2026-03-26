@@ -5,8 +5,8 @@ import pandas as pd
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, roc_auc_score, recall_score, precision_score, f1_score, \
     precision_recall_curve, auc, matthews_corrcoef
-from PANSY import TCR_pMHC_binding
-from data import TotalDataset, collate_fn, tcr_pep_map, mhc_pep_map, get_global_feature, load_mhc_sequences
+from src.seq.PANSY_seq import TCR_pMHC_binding
+from src.datasets.dataset_seq import TotalDataset, collate_fn, tcr_pep_map, mhc_pep_map, get_global_feature, load_mhc_sequences
 
 
 
