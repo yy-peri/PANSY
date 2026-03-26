@@ -9,10 +9,10 @@ from sklearn.model_selection import train_test_split
 
 parser = argparse.ArgumentParser(description='train the TCR_pMHC prediction model')
 # file dir
-parser.add_argument('--input', type=str, default='./data/train.csv',
+parser.add_argument('--input', type=str, default='data/train.csv',
                     help='path to input data, includes the following columns: CDR3, MHC, epitope')
-parser.add_argument('--train_data', type=str, default='./data/train_cache/', help='path to save processed train data')
-parser.add_argument('--val_data', type=str, default='./data/train_cache/', help='path to save processed val data')
+parser.add_argument('--train_data', type=str, default='data/train_cache/', help='path to save processed train data')
+parser.add_argument('--val_data', type=str, default='data/train_cache/', help='path to save processed val data')
 parser.add_argument('--neg_mode', type=str, default='Random_Shuffle', help='negative sampling')
 parser.add_argument('--neg_num', type=int, default=1, help='number of negatives per positive')
 parser.add_argument('--seed', type=int, default=918, help='random seed')
