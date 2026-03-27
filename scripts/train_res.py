@@ -5,10 +5,9 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
-from utils import EarlyStopping, time_since, random_seed
-from PANSY_res import TCR_pMHC_binding
-from res_data import build_loaders
-from utils import get_scores_dist, get_scores_contact
+from src.utils import EarlyStopping, time_since, random_seed, get_scores_dist, get_scores_contact
+from src.res.PANSY_res import TCR_pMHC_binding
+from src.datasets.dataset_res import build_loaders
 from sklearn.model_selection import KFold
 
 
