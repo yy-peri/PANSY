@@ -7,7 +7,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from torch_geometric.data import Batch
 import os
-from utils import random_seed
+from src.utils import random_seed
 from src.res.PANSY_res import TCR_pMHC_binding
 from src.datasets.dataset_res import get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
 
