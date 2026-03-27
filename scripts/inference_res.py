@@ -8,8 +8,8 @@ from torch.utils.data import Dataset, DataLoader
 from torch_geometric.data import Batch
 import os
 from utils import random_seed
-from PANSY_res import TCR_pMHC_binding
-from data import get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
+from src.res.PANSY_res import TCR_pMHC_binding
+from src.datasets.dataset_res import get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
 
 
 
