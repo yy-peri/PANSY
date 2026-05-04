@@ -131,7 +131,7 @@ Run
 ```bash
 python scripts/train_res.py \
   --input data/structure.csv \
-  --pkl_dir data/structure_data/structure \
+  --pkl_dir data/structure_data \
   --output_dir res-outputs/ \
   --model_dir checkpoints/ \
   --pretrained_ckpt checkpoints/PANSY-seq.pt \
