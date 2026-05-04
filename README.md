@@ -1,10 +1,10 @@
-# A biophysically informed, interface-coupled framework for interpretable TCR–pMHC recognition
+# A biophysically informed interface-coupled framework for interpretable TCR–pMHC recognition
 This repository provides the implementation of PANSY.
 It includes both the seq branch and the res branch.
 ![](./output/overview.jpg)
 
 
-PANSY is a framework designed for TCR–epitope binding prediction with two complementary branches: a sequence-based branch (`seq`) and a structure/residue-related branch (`res`). This repository provides the implementation for both branches, including data preparation, model training, and inference pipelines.
+PANSY is a framework designed for TCR–pMHC binding prediction with two complementary branches: a sequence-based branch (`seq`) and a residue-related branch (`res`). This repository provides the implementation for both branches, including data preparation, model training, and inference pipelines.
 
 ## Installation
 ### 1. Create a virtual environment
