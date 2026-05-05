@@ -2,7 +2,7 @@
 
 This repository provides the implementation of PANSY, a biophysically informed framework for modelling TCR–pMHC recognition through coupled TCR–peptide recognition and peptide–MHC presentation interfaces.
 
-![](./data/overview.jpg)
+![](./overview.jpg)
 
 PANSY includes two complementary branches: a sequence-level branch (`seq`) for TCR–pMHC binding prediction and a residue-level branch (`res`) for geometric interpretation, including distance and contact map prediction. This repository provides data preparation, model training and inference pipelines for both branches.
 
