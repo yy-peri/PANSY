@@ -132,7 +132,7 @@ def mhc_pep_map(mhcs, peptides, length_mhc=34, length_peptide=12):
         interaction_map[idx] = diff
     return torch.tensor(interaction_map)  # [B, num_features, length_mhc, length_peptide]
 
-def load_mhc_sequences(mhc_list, allele_path='/data/yyj/TCR-epitope/new/data/common_hla_sequence.csv'):
+def load_mhc_sequences(mhc_list, allele_path='data/common_hla_sequence.csv'):
     def preprocess(allele_str):
         allele_str = str(allele_str).strip().split(",")[0]
         allele_str = allele_str.rstrip("LNQS")
