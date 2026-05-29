@@ -69,7 +69,7 @@ After preparing the cached data, you can train the `PANSY-seq` model using `scri
 
 Run
 ```bash
-python -m scripts.train_seq.py \
+python -m scripts.train_seq \
   --train_data data/train_cache/Random_Shuffle/train_data \
   --val_data data/train_cache/Random_Shuffle/val_data \
   --model_dir checkpoints/PANSY-seq.pt \
@@ -85,7 +85,7 @@ After training, or by directly using a provided checkpoint, you can perform infe
 
 Run
 ```bash
-python -m scripts.inference_seq.py \
+python -m scripts.inference_seq \
   --input_file data/test_seq/Unseen-TCR.csv \
   --batch_size 64 \
   --tcr_pmhc_model checkpoints/PANSY-seq.pt \
@@ -129,7 +129,7 @@ After preparing the CSV file and the corresponding residue-level supervision fil
 
 Run
 ```bash
-python -m scripts.train_res.py \
+python -m scripts.train_res \
   --input data/structure.csv \
   --pkl_dir data/structure_data \
   --output_dir res-outputs/ \
@@ -151,7 +151,7 @@ After training, or by directly using a provided checkpoint, you can perform resi
 
 Run
 ```bash
-python -m scripts.inference_res.py \
+python -m scripts.inference_res \
   --input_csv data/prediction.csv \
   --ckpt checkpoints/PANSY-res.pt \
   --out_npz res-outputs/output.npz \
