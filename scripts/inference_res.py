@@ -32,13 +32,11 @@ class ResidueInferenceDataset(Dataset):
         mhc_pep_map_feat = mhc_pep_map([mhc_seq], [epitope]).squeeze(0)
         global_feat = get_global_feature([cdr3], [epitope], [mhc_seq])[0]
         sample_id = self.sample_ids[idx]
-        motif = row["motif"]
         meta = {
             "id": sample_id,
             "CDR3": cdr3,
             "epitope": epitope,
             "MHC": str(row["MHC"]),
-            "motif": "" if motif is None or (isinstance(motif, float) and np.isnan(motif)) else str(motif),
         }
         return tcr_pep_map_feat, mhc_pep_map_feat, global_feat, meta
 
@@ -94,7 +92,6 @@ def run_inference(model, loader, device, out_npz: str):
     cdr3s = np.array([m["CDR3"] for m in all_meta], dtype=object)
     epitopes = np.array([m["epitope"] for m in all_meta], dtype=object)
     mhcs = np.array([m["MHC"] for m in all_meta], dtype=object)
-    motifs = np.array([m["motif"] for m in all_meta], dtype=object)
     np.savez_compressed(
         out_npz,
         dist_pred=dist_pred_full,
@@ -104,7 +101,6 @@ def run_inference(model, loader, device, out_npz: str):
         CDR3=cdr3s,
         epitope=epitopes,
         MHC=mhcs,
-        motif=motifs,
     )
     print(f"[DONE] Saved inference results to: {out_npz}")
     print(f"dist_pred shape: {dist_pred_full.shape}")
