@@ -4,7 +4,7 @@ import random
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
-from data import get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
+from dataset_seq import get_global_feature, tcr_pep_map, mhc_pep_map, load_mhc_sequences
 from torch_geometric.data import Batch
 
 
