@@ -64,6 +64,8 @@ python -m src.datasets.data_prepare \
 
 **Note:** The script saves the processed training and validation cache files under the negative-sampling subdirectory, e.g., `data/train_cache/Random_Shuffle/train_data` and `data/train_cache/Random_Shuffle/val_data`.
 
+**Optional:** Preprocessing may take ~20 minutes. To skip this step, download the preprocessed cache files from [Zenodo](https://doi.org/10.5281/zenodo.20441923) and extract them to the corresponding cache directory before training.
+
 ### 2. Training
 After preparing the cached data, you can train the `PANSY-seq` model using `scripts/train_seq.py`.
 
